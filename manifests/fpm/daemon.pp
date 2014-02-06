@@ -38,6 +38,7 @@ class php::fpm::daemon (
       owner   => root,
       group   => root,
       mode    => '0644',
+      require => Package['php5-fpm'],
     }
 
   }
