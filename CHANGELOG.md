@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0
+ * remove augeas and switch to inifile for configs
+
+Migration:
+Old: `settings => [‘set PHP/short_open_tag On‘]`
+New: `settings => {‘PHP/short_open_tag’ => ‘On‘]`
+
+
 ## 1.1.0
  * add phpunit to main class
  * fix variable access for augeas
