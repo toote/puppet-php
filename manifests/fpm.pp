@@ -57,5 +57,6 @@ class php::fpm(
     class { 'php::fpm::service': } ->
   anchor { 'php::fpm::end': }
 
-  create_resources(php::fpm::pool, $pools)
+  $merged_pools = hiera_hash('php::fpm::pools', $pools)
+  create_resources(php::fpm::pool, $merged_pools)
 }
